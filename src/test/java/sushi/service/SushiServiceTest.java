@@ -12,7 +12,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 class SushiServiceTest {
 
     @Test
-//    @DisplayName("orderMenu returns valid order number")
     void orderMenu_returns_valid_order_number() {
 
         SushiService sushiService = new SushiService();
@@ -29,7 +28,7 @@ class SushiServiceTest {
     private Customer defaultCustomer() {
         Customer customer = new Customer();
 
-        customer.setId(1234L);
+        customer.setId(12340000L);
         customer.setName("Thomas");
 
         return customer;
