@@ -1,5 +1,6 @@
 package sushi.service;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import sushi.model.Customer;
 import sushi.model.Menu;
@@ -8,19 +9,25 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class SushiServiceTest {
 
-    @Test
-    void orderMenuShouldReturnValidOrderNumber() {
+    private Customer customer;
+    private Menu menu;
 
-        SushiService sushiService = new SushiService();
-
-        Customer customer = new Customer();
+    @BeforeEach
+    void setup() {
+        customer = new Customer();
 
         customer.setId(1234L);
         customer.setName("Thomas");
 
-        Menu menu = new Menu();
+        menu = new Menu();
 
         menu.setName("Maki");
+    }
+
+    @Test
+    void orderMenuShouldReturnValidOrderNumber() {
+
+        SushiService sushiService = new SushiService();
 
         long orderNumber = sushiService.orderMenu(customer, menu);
 
