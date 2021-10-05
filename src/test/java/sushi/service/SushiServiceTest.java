@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Test;
 import sushi.model.Customer;
 import sushi.model.Menu;
+import sushi.model.OrderNumber;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -19,10 +20,10 @@ class SushiServiceTest {
         Customer customer = defaultCustomer();
         Menu menu = makiMenu();
 
-        long orderNumber = sushiService.orderMenu(customer, menu);
+        OrderNumber orderNumber = sushiService.orderMenu(customer, menu);
 
-        assertThat(orderNumber).isGreaterThanOrEqualTo(10000000L);
-        assertThat(orderNumber).isLessThanOrEqualTo(19999999L);
+        assertThat(orderNumber.eightDigits()).isGreaterThanOrEqualTo(10000000L);
+        assertThat(orderNumber.eightDigits()).isLessThanOrEqualTo(19999999L);
     }
 
     private Customer defaultCustomer() {
