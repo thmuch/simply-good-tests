@@ -1,16 +1,19 @@
 package sushi.service;
 
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayNameGeneration;
+import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Test;
 import sushi.model.Customer;
 import sushi.model.Menu;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
 class SushiServiceTest {
 
     @Test
-    void orderMenuShouldReturnValidOrderNumber() {
+//    @DisplayName("orderMenu returns valid order number")
+    void orderMenu_returns_valid_order_number() {
 
         SushiService sushiService = new SushiService();
 
