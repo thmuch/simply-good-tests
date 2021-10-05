@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 import sushi.model.Customer;
 import sushi.model.Menu;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class SushiServiceTest {
 
     @Test
-    void testOrderMenu() {
+    void orderMenuShouldReturnValidOrderNumber() {
 
         SushiService sushiService = new SushiService();
 
@@ -18,7 +18,7 @@ class SushiServiceTest {
 
         long orderNumber = sushiService.orderMenu(customer, menu);
 
-        assertTrue(orderNumber >= 10000000L);
-        assertTrue(orderNumber <= 19999999L);
+        assertThat(orderNumber).isGreaterThanOrEqualTo(10000000L);
+        assertThat(orderNumber).isLessThanOrEqualTo(19999999L);
     }
 }
