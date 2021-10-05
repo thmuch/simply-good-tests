@@ -15,12 +15,18 @@ class SushiServiceTest {
     @Test
     void orderMenu_returns_valid_order_number() {
 
+        // Given (Arrange)
+
         SushiService sushiService = new SushiService();
 
         Customer customer = defaultCustomer();
         Menu menu = makiMenu();
 
+        // When (Act)
+
         OrderNumber orderNumber = sushiService.orderMenu(customer, menu);
+
+        // Then (Assert)
 
         assertThat(orderNumber).isNotNull();
     }
