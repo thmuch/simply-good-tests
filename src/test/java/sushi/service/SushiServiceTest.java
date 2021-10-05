@@ -14,7 +14,13 @@ class SushiServiceTest {
         SushiService sushiService = new SushiService();
 
         Customer customer = new Customer();
+
+        customer.setId(1234L);
+        customer.setName("Thomas");
+
         Menu menu = new Menu();
+
+        menu.setName("Maki");
 
         long orderNumber = sushiService.orderMenu(customer, menu);
 
