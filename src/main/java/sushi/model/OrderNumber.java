@@ -7,6 +7,10 @@ public final class OrderNumber {
     private final long eightDigits;
 
     public OrderNumber(long eightDigits) {
+        if (eightDigits < 10000000L || eightDigits > 19999999L) {
+            throw new IllegalArgumentException("Invalid order number: " + eightDigits);
+        }
+
         this.eightDigits = eightDigits;
     }
 
