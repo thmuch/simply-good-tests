@@ -1,11 +1,8 @@
-package sushi.service;
+package sushi;
 
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Test;
-import sushi.model.Customer;
-import sushi.model.Menu;
-import sushi.model.OrderNumber;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -13,7 +10,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 class SushiServiceTest {
 
     @Test
-    void orderMenu_returns_valid_order_number() {
+//    @DisplayName("orderMenu Returns Valid Order Number")
+    void orderMenu_Returns_Valid_Order_Number() {
 
         // Given (Arrange)
 
@@ -28,11 +26,18 @@ class SushiServiceTest {
 
         // Then (Assert)
 
-        assertThat(orderNumber).isNotNull();
+        assertThat(orderNumber).as("...description...").isNotNull();
+
+//        assertThat(orderNumber.eightDigits()).isGreaterThanOrEqualTo(10000000L);
+//        assertThat(orderNumber.eightDigits()).isLessThanOrEqualTo(19999999L);
+
+//        assertTrue(orderNumber >= 10000000L);
+//        assertTrue(orderNumber <= 19999999L);
     }
 
-    private Customer defaultCustomer() {
+    Customer defaultCustomer() {
         Customer customer = new Customer();
+        // TODO: maybe use ObjectMother? maybe better use TestDataBuilder? maybe combined?
 
         customer.setId(12340000L);
         customer.setName("Thomas");
@@ -40,7 +45,7 @@ class SushiServiceTest {
         return customer;
     }
 
-    private Menu makiMenu() {
+    Menu makiMenu() {
         Menu menu = new Menu();
 
         menu.setName("Maki");

@@ -1,4 +1,4 @@
-package sushi.model;
+package sushi;
 
 public class Customer {
 
