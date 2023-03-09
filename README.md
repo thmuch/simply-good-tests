@@ -10,5 +10,5 @@ You can have a look at the implementation and refactoring steps in the Git commi
 
 ## Talks & Slides
 
-- [JCON 2022](https://jcononline2022.sched.com/event/11lE0/simply-good-tests-a-practical-approach), 2022-09-20, ([PDF](https://muchsoft.com/presentations/SimplyGoodTests-JCON-2022.pdf))
+- [JCON 2022](https://jcononline2022.sched.com/event/11lE0/simply-good-tests-a-practical-approach), 2022-09-20, ([PDF](https://muchsoft.com/presentations/SimplyGoodTests-JCON-2022.pdf), [Video](https://www.youtube.com/watch?v=a7JWVhVtfaE))
 - [JAX London 2021](https://jaxlondon.com/software-architecture-design/simply-good-testing-a-practical-approach/), 2021-10-05, ([PDF](https://muchsoft.com/presentations/SimplyGoodTests-JAXLondon-2021.pdf))
